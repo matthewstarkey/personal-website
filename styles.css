@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Black */
+    color: #e6e6e6; /* Light gray/white */
+}
+
+header {
+    background-color: #7030a0; /* Light purple */
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light gray */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center; /* Center the navigation tabs */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; /* Use flexbox to make the list items stack horizontally */
+}
+
+nav li {
+    margin-right: 10px; /* Add spacing between the navigation tabs */
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px; /* Slightly smaller padding */
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+h1, h2, h3 {
+    color: #7030a0; /* Light purple */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0; /* Add this line to remove the default margin */
+    list-style: none;
+    display: flex; /* Use flexbox to make the list items stack horizontally */
+}
