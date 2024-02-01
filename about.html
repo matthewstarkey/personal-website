@@ -10,11 +10,72 @@
 
 <body>
 
-    <div class="container">
+    <div class="container-info">
         <h2>About Me</h2>
-        <p>Write a brief introduction about yourself and your interests.</p>
+        <p>I love chocolates</p>
     </div>
-
+    <div class="gallery-wrap">
+        
+        <div class="gallery">
+            <div>
+                <span><img src="img/img0.jpg"></span>
+                <span><img src="img/img1.jpg"></span>
+                <span><img src="img/img2.jpg"></span>
+            </div>
+            
+            <div>
+                <span><img src="img/img3.jpg"></span>
+                <span><img src="img/img4.jpg"></span>
+                <span><img src="img/img5.jpg"></span>
+            </div>
+            <div>
+                <span><img src="img/img6.jpg"></span>
+                <span><img src="img/img7.jpg"></span>
+                <span><img src="img/img8.jpg"></span>
+            </div>
+            <div>
+                <span><img src="img/img9.jpg"></span>
+                <span><img src="img/img10.jpg"></span>
+                <span><img src="img/img11.jpg"></span>
+            </div>
+            
+        </div>
+    </div>
+    
 </body>
 
+<script>
+    //script to scroll through gallery images :3
+    document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.querySelector(".gallery");
+    imgIndex = 0
+    gallery_length = gallery.children[imgIndex].offsetWidth;
+    gallery_size = gallery.children.length;
+    console.log(gallery_size);
+
+    // Function to move to the next image
+    function nextImage() {
+        imgIndex++;
+        gallery.scrollBy({
+            left: gallery_length, //size of div
+            behavior: "smooth",
+        });
+    }
+    function backImage() {
+        imgIndex = 0;
+        gallery.scrollBy({
+            right: (gallery_length * gallery_size), //size of div
+            behavior: "smooth",
+        });
+    }
+
+    // Set an interval to move to the next image every 3 seconds
+    if(imgIndex < gallery_size) {
+        setInterval(nextImage, 5000);
+    }
+});
+
+
+
+</script>
 </html>

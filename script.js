@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav a");
     const iframe = document.querySelector("#content-frame");
-
     navLinks.forEach((link) => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
@@ -13,4 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
             iframe.src = targetPage;
         });
     });
+
+
+
 });
+
+
